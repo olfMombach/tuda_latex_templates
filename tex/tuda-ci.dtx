@@ -160,14 +160,16 @@
 \geometry{
   top=\g_ptxcd_topMargin_dim,
   inner=\g_ptxcd_innerMargin_dim,
-  outer=\dim_eval:n {\g_ptxcd_outerMargin_dim},
+  outer=\g_ptxcd_outerMargin_dim,
   bottom=\g_ptxcd_bottomMargin_dim,
   columnsep= \g_ptxcd_columnSep_dim,
   includehead,
   includefoot,
   includemp,
   nomarginpar,
-  includemp, marginpar=\g_ptxcd_marginpar_dim, marginparsep=\g_ptxcd_columnSep_dim,
+  includemp,
+  marginpar=\g_ptxcd_marginpar_dim,
+  marginparsep=\g_ptxcd_columnSep_dim,
   headheight=\g_ptxcd_headheight_dim,
   reversemp
 }
@@ -1864,13 +1866,14 @@
 	\geometry{
 		top=\g_ptxcd_topMargin_dim,
 		inner=\g_ptxcd_innerMargin_dim,
-		outer=\dim_eval:n {\g_ptxcd_outerMargin_dim},
+		outer=\g_ptxcd_outerMargin_dim,
 		bottom=\g_ptxcd_bottomMargin_dim,
 		columnsep= \g_ptxcd_columnSep_dim,
 		includehead,
 		includefoot,
 %<class>		includemp,
 %<class>		nomarginpar,
+%<class>		marginparsep=\c_zero_dim,
 		headheight=\g_ptxcd_headheight_dim
 	}
 %    \end{macrocode}
