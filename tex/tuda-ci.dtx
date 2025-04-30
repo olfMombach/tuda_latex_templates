@@ -1133,6 +1133,12 @@
 % \iffalse
 %</!beamer>%^^A Logo
 % \fi
+% \begin{documentation}
+% \DescribeKeyOption{accept-missing-logos=\meta{boolean}}{false}
+% As the Logo files sadly may not be published within this bundle, there is an option to allow the files to be used without  logo. 
+% By enabling \option{accept-missing-logos} there will be a workaround used in case the logo files can not be found by the \LaTeX{} compiler.
+% This is automatically enabled within the testing pipelines within the development repository.
+% \end{documentation}
 % \changes{v4.00}{2025-01-26}{Added accept-missing-logos option for public testing workflows.}
 %    \begin{macrocode}
   accept-missing-logos .bool_gset:N = \g_ptxcd_logo_workaround_bool,
