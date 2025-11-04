@@ -26,7 +26,14 @@ Die Beispieldateien existieren auf Deutsch und Englisch.
 Im CTAN Release sind nur die Englischsprachigen Dateien enthalten.
 Die Deutschsprachigen sind unter sind im [GitHub Repository](https://github.com/tudace/tuda_latex_templates/tree/main/examples) zu finden.
 
-## Support und Hilfe
+## Dokumentation, Support und Hilfe
+
+Die Paketdokumentation ist über das tool `texdoc` verfügbar. Diese Methode ist die empfohlene, damit die Verwendete Version zur Dokumentation passt.
+Falls es sich nicht um eine lokale installation handelt, findet sich die Dokumentation auch über das [Online-Tool texdoc-online](https://texdoc.org)
+
+[Direktlink zur tuda-ci.pdf](https://texdoc.org/serve/tuda-ci/0)
+
+Darüber hinaus finden sich die kompilierten PDFs auf [CTAN](http://mirror.ctan.org/macros/latex/contrib/tuda-ci/doc) oder – falls das Paket installiert ist – im ensprechenden Doku-Verzeichnis (<Pfad zu Ihrer LaTeX-Installation>/doc/latex/tuda-ci).
 
 Die ULB bietet über das Team Infokompetenz LaTeX-Support und insbesondere Hilfe bei der Verwendung von TUDa-CI an. (https://www.ulb.tu-darmstadt.de/finden_nutzen/medien_nutzen/dokumente_erstellen/latex/index.de.jsp). Darüber hinaus findet auch die Sprechstunde wieder statt und bietet die Möglichkeit individuelle Fragestellungen zu bearbeiten.
 Die Termine zu allen Lernformaten finden sich auf der [Website der ULB](https://www.ulb.tu-darmstadt.de/lernen_arbeiten/lehr_und_lernformate/textverarbeitung/textverarbeitung.de.jsp).
@@ -34,10 +41,11 @@ Die Termine zu allen Lernformaten finden sich auf der [Website der ULB](https://
 ## Verwendungshinweis
 
 Die Richtlinien des Corporate Designs (https://www.intern.tu-darmstadt.de/media/medien_stabsstelle_km/services/medien_cd/das_bild_der_tu_darmstadt.pdf), sowie die Anforderungen der Universitätsbibliothek erfordern einige spezielle Konfigurationen. Beispielsweise ist für wissenschaftliche Veröffentlichungen und Abschlussarbeiten die Erzeugung einer archivierbaren PDF-Datei (PDF/A) vorgesehen.
+
 Dies ist mit aktuellen LaTeX-Paketen und dem Compiler LuaLaTeX deutlich besser umzusetzen, als mit älteren Formaten.
 Aus diesem Grund sollten Sie vor der Verwendung von TUDa-CI Ihre TeX-Distribution aktualisieren und nach Möglichkeit LuaLaTeX als Compiler verwenden.
+
 Die Nutzung anderer Kompilierungsprogramme ist grundsätzlich möglich, allerdings werden dann ggf. nicht alle Funktionen unterstützt.
-Weitere Hinweise finden sich in den Beispieldateien dokumentiert. Diese sind auch als kompilierte PDFs auf [CTAN](http://mirror.ctan.org/macros/latex/contrib/tuda-ci/doc) oder – falls das Paket installiert ist – im ensprechenden Doku-Verzeichnis (<Pfad zu Ihrer LaTeX-Installation>/doc/latex/tuda-ci) verfügbar.
 
 ## Abhängigkeiten
 
