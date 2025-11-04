@@ -31,25 +31,46 @@
 %%
 % !TeX program = lualatex
 %%
-%% Falls PDF/A gebraucht wird:
-% \DocumentMetadata{
-% pdfstandard=a-2b,
-% pdfversion=1.7,% 2.0 geht auch, aber dann geht kein PDF/A-2b
-% lang=de,
-%}
-
-
 
 \documentclass[
-ngerman,%globale Übergabe der Hauptsprache
-aspectratio=169,%Beamer eigene Option zum Umschalten des Formates
-color={accentcolor=2d},
-mecheng,
-logo=true,%Kein Logo auf Folgeseiten
-colorframetitle=true,%Akzentfarbe auch im Frametitle
-% logofile=example-image, %Falls die Logo Dateien nicht vorliegen
+	german,% Hauptsprache als globale Option, früher war ngerman notwendig
+	accentcolor=9c,% Auswahl der Akzentfarbe
+%	accept-missing-logos=true,% Keine Fehlermeldung, falls die Logo Dateien nicht vorliegen
+%	logofile=example-image,% Falls die Logo-Datei ersetzt werden soll
 ]{tudabeamer}
-\usepackage[main=ngerman]{babel}
+
+%%%%%%%%%%%%%%%%%%%
+% Spracheinstellungen
+%%%%%%%%%%%%%%%%%%%
+\usepackage[german]{babel}
+\usepackage[autostyle]{csquotes}% Sprachabhängige Anführungszeichen mit \enquote
+
+%%%%%%%%%%%%%%%%%%%
+% Formatierungen für Beispiele in diesem Dokument. Im Allgemeinen nicht notwendig!
+%%%%%%%%%%%%%%%%%%%
+\newcommand*{\code}[1]{\texttt{#1}}
+%%%%%%%%%%%%%%%%%%%
+% Ende der Demo-Formatierungseinstellungen
+%%%%%%%%%%%%%%%%%%%
+
+\title[TUDaBeamer2023]{\LaTeX~beamer im Corporate Design der TU Darmstadt}
+\subtitle{Design2023-beta}
+\author[M. Peischl]{Marei Peischl}
+\department{\TeX/\LaTeX}
+\institute{pei\TeX}
+
+% Die Skalierung von zusätzlichen Logos und Titelgrafiken ist auf der Folie „Skalierung von Logos/Titelgrafiken“ beschrieben
+% In der Überschrift/Seitenleiste wird das Sublogo/Partnerlogo platziert
+
+\sublogo{\color{blue!50}\rule{\width}{\height}}
+\partnerlogo*{\includegraphics{example-image}}
+
+% Die Titelgrafik wird hinter dem Titel platziert
+% \titlegraphic*{\includegraphics{example-image}}
+
+\date{2023-10-02}% Falls kein Datum angegeben ist, wird \today verwendet
+
+\AtBeginSection{\sectionpage}% Abschnittstrenner aktivieren
 
 \begin{document}
 

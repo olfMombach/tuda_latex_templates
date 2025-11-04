@@ -32,8 +32,11 @@
 % !TeX program = lualatex
 %%
 
-% PDF/A über pdfmanagement und nicht über pdfx
-\DocumentMetadata{
+% PDF/A über pdfmanagement
+% Vermutlich temporärer Workaround für eine Inkompatibilität mit dem tagging-project  https://github.com/tudace/tuda_latex_templates/issues/521
+% \DocumentMetadata{
+\RequirePackage{pdfmanagement}
+\SetKeys[document/metadata]{
 	pdfstandard=a-2b,
 	pdfversion=1.7,% 2.0 geht auch, aber dann geht kein PDF/A-2b
 	lang=de,

@@ -31,12 +31,6 @@
 %%
 % !TeX program = lualatex
 %%
-%% In case you need PDF/A
-% \DocumentMetadata{
-% pdfstandard=a-2b,
-% pdfversion=1.7,% 2.0 is possible as well, but PDF/A-2b requires < 2.0
-% lang=en,
-%}
 
 \documentclass[
 	english,% Main language as global option
@@ -73,7 +67,6 @@
 %%%%%%%%%%%%%%%%%%%
 % End of demo specific setup
 %%%%%%%%%%%%%%%%%%%
-\begin{document}
 
 \title{\pkg{tcolorbox}-Poster using TU Darmstadt's Corporate Design}
 \author{Marei Peischl\inst{*}\thanks{kontakt@peitex.de} \and der \TeX-Löwe}
@@ -89,6 +82,8 @@
 	\includegraphics[height=\height]{example-image}
 	\includegraphics[height=\height]{example-image}
 }
+
+\begin{document}
 
 \begin{tcbposter}[
 	poster={
