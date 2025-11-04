@@ -1135,26 +1135,31 @@
 % \fi
 % \begin{documentation}
 % \DescribeKeyOption{accept-missing-logos=\meta{boolean}}{false}
-% As the Logo files sadly may not be published within this bundle, there is an option to allow the files to be used without  logo. 
+% As the Logo files sadly may not be published within this bundle, there is an option to allow the files to be used without  logo.
 % By enabling \option{accept-missing-logos} there will be a workaround used in case the logo files can not be found by the \LaTeX{} compiler.
 % This is automatically enabled within the testing pipelines within the development repository.
 % \end{documentation}
+% \begin{implementation}
 % \changes{v4.00}{2025-01-26}{Added accept-missing-logos option for public testing workflows.}
+% \begin{optionenv}{accept-missing-logos}
 %    \begin{macrocode}
   accept-missing-logos .bool_gset:N = \g_ptxcd_logo_workaround_bool,
 %<!beamer-outer>  accept-missing-logos .initial:n = false,
   accept-missing-logos .usage:n = load,
   accept-missing-logos .default:n = true,
 %    \end{macrocode}
+% \end{optionenv}
 % \iffalse
 %<*beamer|class|print>
 % \fi
+% \begin{optionenv}{department}
 %    \begin{macrocode}
   department .choice:,
   department / default .code:n = \str_gset:Nn \g_ptxcd_department_str {default},
   department / mecheng .code:n = {
       \str_gset:Nn \g_ptxcd_department_str {mecheng}
 %    \end{macrocode}
+% \end{optionenv}
 % \iffalse
 %<*tudapub|print|letter>
 % \fi
@@ -3308,17 +3313,37 @@
 }
 
 \tl_new:N  \g_ptxcd_license_info_tl
+%    \end{macrocode}
+% \changes{version}{date}{Change prefixes for tuprints to match the new server infrastructure \issue{520}}
+%    \begin{macrocode}
+\tl_const:Nn \c_@@_doi_prefix_tl {
+	 https://doi.org/10.26083/tuda-
+}
+\tl_const:Nn \c_@@_urn_prefix_tl {
+	https://nbn-resolving.de/urn:nbn:de:tuda-tuda-
+}
+\cs_new:Nn \_@@_add_url_prefix:nn {
+	\regex_if_match:nnTF {^https?://} {#2} {
+		\tl_gset:cn {g_ptxcd_thesis_#1_tl} {#2}
+	} {
+		\tl_gset:ce {g_ptxcd_thesis_#1_tl} {\exp_not:v {c_@@_#1_prefix_tl} \exp_not:n {#2}}
+	}
+}
+
+%    \end{macrocode}
+% Initilize variables for |\tuprints|.
+%    \begin{macrocode}
+\tl_new:N  \g_ptxcd_thesis_doi_tl
+\tl_new:N \g_ptxcd_thesis_urn_tl
+\tl_gset:Ne \g_ptxcd_thesis_doi_tl {\exp_not:v {c__ptxcd_doi_prefix_tl} \exp_not:N \g_ptxcd_thesis_tuprints_tl}
 
 \keys_define:nn {ptxcd/thesis} {
-  urn .tl_gset:N =\g_ptxcd_thesis_urn_tl,
-  urn .initial:V = \c_empty_tl,
+  urn .code:n = {\_@@_add_url_prefix:nn {urn} {#1}},
   printid .tl_gset:N = \g_ptxcd_thesis_tuprints_tl,
-  printid .initial:V = \c_empty_tl,
 %    \end{macrocode}
 % \changes{v4.02}{2025-03-03}{Add initial setting for doi to use printid.}
 %    \begin{macrocode}
-  doi .tl_gset:N = \g_ptxcd_thesis_doi_tl,
-  doi .initial:n = 10.26083/tuprints-\prg_replicate:nn {8 - \tl_count:N \g_ptxcd_thesis_tuprints_tl} {0}\g_ptxcd_thesis_tuprints_tl,
+  doi .code:n = {\_@@_add_url_prefix:nn {doi} {#1}},
   year .tl_gset:N = \g_ptxcd_thesis_publication_year_tl,
   year .initial:n = ,
   license .choices:nn = {cc-by-4.0,cc-by-sa-4.0,cc-by-nc-sa-4.0,cc-by-nc-4.0,cc-by-nd-4.0,cc-by-nc-nd-4.0} {
@@ -3394,18 +3419,22 @@ Please~choose~your~license~manually~to~avoid~unintended~changes.
   {\keys_set:nn {ptxcd/thesis} {#1}}
   {\keys_set:nn {ptxcd/thesis} {printid=#1}}
   \lowertitleback{
+  \begingroup
+	\setlength{\parindent}{\z@}
+	\setlength{\parskip}{\z@}
     \urlstyle{same}
     \selectlanguage{german}
-    Bitte~zitieren~Sie~dieses~Dokument~als:
-    \tl_if_empty:NF \g_ptxcd_thesis_urn_tl {\\URN:~urn:nbn:de:tuda-tuprints-\g_ptxcd_thesis_urn_tl}\\
-    \tl_if_empty:NF \g_ptxcd_thesis_doi_tl {DOI:~\url{https://doi.org/\g_ptxcd_thesis_doi_tl}\\}
+    Bitte~zitieren~Sie~dieses~Dokument~als:\par
+    \tl_if_empty:NF \g_ptxcd_thesis_urn_tl {URN:~\url{\g_ptxcd_thesis_urn_tl}\par}
+    \tl_if_empty:NF \g_ptxcd_thesis_doi_tl {DOI:~\url{\g_ptxcd_thesis_doi_tl}\par}
     \tl_if_empty:NF \g_ptxcd_thesis_publication_year_tl {Jahr~der~Veröffentlichung~auf~TUprints:~\g_ptxcd_thesis_publication_year_tl}
     \par\vspace{\baselineskip}
-    Dieses~Dokument~wird~bereitgestellt~von~tuprints,\\
-    E-Publishing-Service~der~TU~Darmstadt\\
-    \url{https://tuprints.ulb.tu-darmstadt.de}\\
-    \url{tuprints@ulb.tu-darmstadt.de}\\[2\baselineskip]
-    \tl_if_empty:NF \g_ptxcd_license_info_tl {\\[2\baselineskip]\g_ptxcd_license_info_tl}
+    Dieses~Dokument~wird~bereitgestellt~von~tuprints,\par
+    E-Publishing-Service~der~TU~Darmstadt\par
+    \url{https://tuprints.ulb.tu-darmstadt.de}\par
+    \url{tuprints@ulb.tu-darmstadt.de}\par\vskip\baselineskip
+    \tl_if_empty:NF \g_ptxcd_license_info_tl {\par\vskip\baselineskip\g_ptxcd_license_info_tl}
+    \endgroup
   }%
 }
 
