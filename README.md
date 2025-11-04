@@ -2,7 +2,7 @@
 
 Copyright (C) Marei Peischl <marei@peitex.de>, 2018–2025
 
-tuda-ci v4.03 (2025-04-02)
+tuda-ci v4.04 (2025-11-04)
 
 ***************************************************************************
 
@@ -156,6 +156,7 @@ A full list of all files of this Project including the additional example files 
 
 Older version information can be found in (`CHANGELOG.md` in the Repository)[https://github.com/tudace/tuda_latex_templates/blob/main/CHANGELOG.md].
 
+- v4.04 (2025-11-04) change new prefixes to match the new TUprints
 - v4.03 (2025-04-02) bugfix and improval of error handling for conflicts with pdfa=true
 - v4.02 (2025-02-25)
    - use tuprints DOI by default

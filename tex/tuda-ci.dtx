@@ -29,13 +29,13 @@
 %
 % \iffalse
 %<*driver>
-\ProvidesFile{tuda-ci.dtx}[2025-04-02 v4.03 The TUDa-CI Bundle – LaTeX using the Corporate Design of TU Darmstadt]
+\ProvidesFile{tuda-ci.dtx}[2025-11-04 v4.04 The TUDa-CI Bundle – LaTeX using the Corporate Design of TU Darmstadt]
 %</driver>
 %<*package|class>
 %<@@=ptxcd>
 \NeedsTeXFormat{LaTeX2e}[2022-06-01]
-%<tudapub>\ProvidesExplClass{tudapub}{2025-04-02}{4.03}{Publications using TU Darmstadt's Corporate Design (TUDa-CI)}
-%<tudathesis>\ProvidesExplFile{tudathesis.cfg}{2025-04-02}{4.03}{Special Features for publication type 'thesis' using TU Darmstadt's Corporate Design (tuda-ci)}
+%<tudapub>\ProvidesExplClass{tudapub}{2025-11-04}{4.04}{Publications using TU Darmstadt's Corporate Design (TUDa-CI)}
+%<tudathesis>\ProvidesExplFile{tudathesis.cfg}{2025-11-04}{4.04}{Special Features for publication type 'thesis' using TU Darmstadt's Corporate Design (tuda-ci)}
 %</package|class>
 %<*driver>
 \PassOptionsToPackage{hyperindex=false}{hyperref}
@@ -3314,7 +3314,7 @@
 
 \tl_new:N  \g_ptxcd_license_info_tl
 %    \end{macrocode}
-% \changes{version}{date}{Change prefixes for tuprints to match the new server infrastructure \issue{520}}
+% \changes{v4.04}{2025-11-04}{Change prefixes for tuprints to match the new server infrastructure \issue{520}}
 %    \begin{macrocode}
 \tl_const:Nn \c_@@_doi_prefix_tl {
 	 https://doi.org/10.26083/tuda-
@@ -3370,12 +3370,6 @@
   signature-location .tl_set:N = \l_ptxcd_signature_location_tl,
   signature-location .initial:n = Darmstadt,
 }
-
-\msg_new:nnnn {tudapub/thesis} {default-license-will-change} {
-TUprints~changed~their~default~license.\\
-tuda-ci~will~adapt~this~change~in~the~next~major~update.~\\
-Please~choose~your~license~manually~to~avoid~unintended~changes.
-} {Use~either~the~old~default~value~license=cc-by-nc-nd-2.0-de or~license=cc-by-4.0~or~license={<custom~text>}~with~\string\tuprints.}
 
 \cs_new:cn {g_@@_cc-by-nc-nd-2.0-de:} {
   Die~Veröffentlichung~steht~unter~folgender~Creative~Commons~Lizenz:\\
