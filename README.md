@@ -23,19 +23,19 @@ Es liefert neben den Klassen-, Paket- und Konfigurationsdateien auch Anwenderdok
 Das Gesamtpaket wurde in Teilen inspiriert von Clemens von Loewenichs and Joe Werners TUD-Design Paket.
 
 Die Beispieldateien existieren auf Deutsch und Englisch.
-Im CTAN Release sind nur die Englischsprachigen Dateien enthalten.
+Im CTAN Release sind nur die englischsprachigen Dateien enthalten.
 Die Deutschsprachigen sind unter sind im [GitHub Repository](https://github.com/tudace/tuda_latex_templates/tree/main/examples) zu finden.
 
 ## Dokumentation, Support und Hilfe
 
-Die Paketdokumentation ist über das tool `texdoc` verfügbar. Diese Methode ist die empfohlene, damit die Verwendete Version zur Dokumentation passt.
-Falls es sich nicht um eine lokale installation handelt, findet sich die Dokumentation auch über das [Online-Tool texdoc-online](https://texdoc.org)
+Die Paketdokumentation ist über das tool `texdoc` verfügbar. Diese Methode ist die empfohlene, damit die verwendete Version zur Dokumentation passt.
+Falls es sich nicht um eine lokale Installation handelt, findet sich die Dokumentation auch über das [Online-Tool texdoc-online](https://texdoc.org).
 
 [Direktlink zur tuda-ci.pdf](https://texdoc.org/serve/tuda-ci/0)
 
-Darüber hinaus finden sich die kompilierten PDFs auf [CTAN](http://mirror.ctan.org/macros/latex/contrib/tuda-ci/doc) oder – falls das Paket installiert ist – im ensprechenden Doku-Verzeichnis (<Pfad zu Ihrer LaTeX-Installation>/doc/latex/tuda-ci).
+Darüber hinaus finden sich die kompilierten PDFs auf [CTAN](http://mirror.ctan.org/macros/latex/contrib/tuda-ci/doc) oder – falls das Paket installiert ist – im entsprechenden Doku-Verzeichnis (<Pfad zu Ihrer LaTeX-Installation>/doc/latex/tuda-ci).
 
-Die ULB bietet über das Team Infokompetenz LaTeX-Support und insbesondere Hilfe bei der Verwendung von TUDa-CI an. (https://www.ulb.tu-darmstadt.de/finden_nutzen/medien_nutzen/dokumente_erstellen/latex/index.de.jsp). Darüber hinaus findet auch die Sprechstunde wieder statt und bietet die Möglichkeit individuelle Fragestellungen zu bearbeiten.
+Die ULB bietet über das Team Infokompetenz LaTeX-Support und insbesondere Hilfe bei der Verwendung von TUDa-CI an. (https://www.ulb.tu-darmstadt.de/finden_nutzen/medien_nutzen/dokumente_erstellen/latex/index.de.jsp). Darüber hinaus findet auch die Sprechstunde wieder statt und bietet die Möglichkeit, individuelle Fragestellungen zu bearbeiten.
 Die Termine zu allen Lernformaten finden sich auf der [Website der ULB](https://www.ulb.tu-darmstadt.de/lernen_arbeiten/lehr_und_lernformate/textverarbeitung/textverarbeitung.de.jsp).
 
 ## Verwendungshinweis
@@ -54,9 +54,9 @@ Das Bundle verwendet Pakete der Standard-LaTeX-Distributionen. Bei der Verwendun
 ## Installation
 
 TUDa-CI ist Bestandteil der beiden populären TeX Distributionen ([MikTeX](https://miktex.org/download) & [TeX Live](https://tug.org/texlive/), und damit auch im MacTeX-Paket).
-Es ist somit möglich die Templates über die TeX Distribution zu installieren und zu updaten.
+Es ist somit möglich, die Templates über die TeX-Distribution zu installieren und zu updaten.
 
-Bei TeX Live werden Updates und Paketinstalation durch das Programm „TeX Live Manager“ (tlmgr) ausgeführt. Das Analogon unter MikTeX heißt „MikTeX Console”.
+Bei TeX Live werden Updates und Paketinstallation durch das Programm „TeX Live Manager“ (tlmgr) ausgeführt. Das Analogon unter MikTeX heißt „MikTeX Console”.
 Unter Mac und Windows existieren bei Standardeinstellungen auch grafische Nutzeroberflächen, die durch das Update/die Installation führen.
 
 Falls Sie noch keine Distribution installiert haben, finden Sie die notwendigen Informationen zur Installation von TeX Live unter:
@@ -66,9 +66,9 @@ Falls Sie noch keine Distribution installiert haben, finden Sie die notwendigen 
 
 #### Sonderfall: Paketverwaltung des Betriebssystems (Linux/BSD)
 
-Für einige Linux/BSD-Varianten existieren texlive-Pakete die über die Paketverwaltung des Systems installierbar sind.
-Da TUDa-CI sehr speziell ist, ist es meistens nur in der Paketen _texlive-full_ enthalten.
-Allerdings sind die in den Paketverwaltungen enthalten TeX Live Versionen häufig stark veraltet und die Logo-Dateien müssen ohnehin zusätzlich installiert werden.
+Für einige Linux-/BSD-Varianten existieren texlive-Pakete, die über die Paketverwaltung des Systems installierbar sind.
+Da TUDa-CI sehr speziell ist, ist es meistens nur im Paket _texlive-full_ enthalten.
+Allerdings sind die in den Paketverwaltungen enthaltenen TeX Live Versionen häufig stark veraltet und die Logo-Dateien müssen ohnehin zusätzlich installiert werden.
 Wir empfehlen daher die Installation von TeX Live über den TeX Live Manager: https://tug.org/texlive/doc/texlive-en/texlive-en.html#installation.
 
 ### Nutzung von TUDa-CI über Overleaf
@@ -80,13 +80,13 @@ Somit ist eine Nutzung ohne lokale Installation möglich.
 
 Die verwendeten Logos sind nicht Bestandteil dieses Bundles und können von Mitgliedern der TU Darmstadt über das interne Netzwerk heruntergeladen werden.
 
-Der Download sowie ein Paket, mit Installtionsskripten für die permanente Installation der Logodateien findet sich auf der (zugehörige Seite der ULB)[https://www.ulb.tu-darmstadt.de/finden_nutzen/medien_nutzen/dokumente_erstellen/latex/index.de.jsp].
+Der Download sowie ein Paket mit Installtionsskripten für die permanente Installation der Logodateien findet sich auf der [zugehörigen Seite der ULB](https://www.ulb.tu-darmstadt.de/finden_nutzen/medien_nutzen/dokumente_erstellen/latex/index.de.jsp).
 
-Für Nicht-Mitglieder ist eine Möglichkeit zur Platzierung eines Ersatzlogos dokumentiert und es existiert die Möglichkeit Fehlende Logos per Option zu ignorieren.
+Für Nicht-Mitglieder ist eine Möglichkeit zur Platzierung eines Ersatzlogos dokumentiert und es existiert die Möglichkeit, fehlende Logos per Option zu ignorieren.
 
 ## Enthaltene Templatedateien
 
-Eine vollständige Liste aller Dateien, die zu diesem Projekt gehören kann findet sich in `MANIFEST.md`.
+Eine vollständige Liste aller Dateien, die zu diesem Projekt gehören, findet sich in `MANIFEST.md`.
 
 | Dokumententyp                         | Templatedatei(en)                                                              | Dokumentenklasse                          |
 | ------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------- |
@@ -103,13 +103,13 @@ Eine vollständige Liste aller Dateien, die zu diesem Projekt gehören kann find
 
 Darüber hinaus existieren deutschsprachige Versionen der Template-Dateien im [GitHub Repository](https://github.com/tudace/tuda_latex_templates) sowie spezielle Anwendungsbeispiele:
 
-Kompatibilitätsmodus TUDexercise: (Examples-TUDexercise-compat.tex)[https://github.com/tudace/tuda_latex_templates/blob/main/examples/Examples-TUDexercise-compat.tex]
-Farbskalen von tuda-pgfplots: (Examples-TUDa-pgfplots.tex)[https://github.com/tudace/tuda_latex_templates/blob/main/examples/Examples-TUDa-pgfplots.tex]
+- Kompatibilitätsmodus TUDexercise: [Examples-TUDexercise-compat.tex](https://github.com/tudace/tuda_latex_templates/blob/main/examples/Examples-TUDexercise-compat.tex)
+- Farbskalen von tuda-pgfplots: [Examples-TUDa-pgfplots.tex](https://github.com/tudace/tuda_latex_templates/blob/main/examples/Examples-TUDa-pgfplots.tex)
 
 # Summary
 
 The TUDa-CI-Bundle provides a possibility to use the Corporate Design of TU Darmstadt in LaTeX.
-Therefore it contains documentclasses as well as some helper packages and config files together with some templates for user documentation, which currently are only available in German.
+Therefore it contains document classes as well as some helper packages and config files together with some templates for user documentation, which currently are only available in German.
 
 If you are not a German speaker and require some help using these files, please feel free to contact the maintainers.
 
@@ -145,7 +145,7 @@ If you are not a member of TU Darmstadt the example files include information on
 
 ## Included templates and document types
 
-A full list of all files of this Project including the additional example files can be found in `MANIFEST.md`.
+A full list of all files of this project including the additional example files can be found in `MANIFEST.md`.
 
 | document type                         | name of template file                                                 | used documentclass and config             |
 | ------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- |
